@@ -40,8 +40,8 @@ jobs:
       uses: ncipollo/release-action@v1
       with:
         token: ${{ secrets.TOKEN }}
-        artifacts: "build/app/outputs/apk/release/*, build/app/outputs/bundle/release/*"
-        tag: MyMuster_v1.1.${{github.run_number}}
+        artifacts: "build/app/outputs/apk/release/*.apk, build/app/outputs/bundle/release/*.aab"
+        tag: MyMuster_$APP_VERSION
         prerelease: false
 
     - name: Upload APK artifact
